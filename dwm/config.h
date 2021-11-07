@@ -34,6 +34,7 @@ static const char *colors[][3]      = {
 
 static const char *const autostart[] = {
   "fcitx5", NULL,
+  "copyq", NULL,
   "picom", "-b", NULL,
   "sh" ,"-c" ,"~/.config/scripts/dwm_bar.sh", NULL,
   // "feh", "--bg-fill", "--randomize", "~/.config/wallpaper/*", NULL,
@@ -51,6 +52,8 @@ static const Rule rules[] = {
 	/* class      instance    title       tags mask     isfloating   monitor */
 	{ "Gimp",     NULL,       NULL,       0,            1,           -1 },
 	{ "Firefox",  NULL,       NULL,       1 << 8,       0,           -1 },
+  { "flameshot",NULL,       NULL,       0,            1,           -1 },
+  { "copyq",    NULL,       NULL,       0,            1,           -1 },
 };
 
 /* layout(s) */
@@ -98,7 +101,8 @@ static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont,
 static const char *termcmd[]  = { "st", NULL };
 static const char *screen_lock[] = {"slock", NULL };
 static const char *screenshotcmd[] = { "flameshot", "gui", NULL };
-static const char *trayercmd[] = {"~/.config/scripts/t-tray.sh", NULL};
+static const char *trayercmd[] = {"/home/binary4cat/.config/scripts/t-tray.sh", NULL};
+static const char *copyqtogglecmd[] = {"copyq", "toggle", NULL};
 
 static const char *upvol[]   = { "/usr/bin/pactl", "set-sink-volume", "0", "+2%",     NULL };
 static const char *downvol[] = { "/usr/bin/pactl", "set-sink-volume", "0", "-2%",     NULL };
@@ -117,6 +121,7 @@ static Key keys[] = {
 	{ 0,                            XF86XK_AudioMute,        spawn,          {.v = mutevol } },
 	{ 0,                            XF86XK_AudioRaiseVolume, spawn,          {.v = upvol   } },
   { MODKEY|ShiftMask,             XK_t,      spawn,          {.v = trayercmd}},  /* 打开系统托盘 */
+  { MODKEY|ControlMask,           XK_grave,  spawn,          {.v = copyqtogglecmd}}, 
 	{ MODKEY,                       XK_b,      togglebar,      {0} },
 	{ MODKEY|ShiftMask,             XK_j,      rotatestack,    {.i = +1 } }, /* 在窗口之间循环切换 */
 	{ MODKEY|ShiftMask,             XK_k,      rotatestack,    {.i = -1 } }, /* 同上 */
