@@ -9,7 +9,7 @@ static const unsigned int gappih    = 5;       /* horiz inner gap between window
 static const unsigned int gappiv    = 5;       /* vert inner gap between windows */
 static const unsigned int gappoh    = 5;       /* horiz outer gap between windows and screen edge */
 static const unsigned int gappov    = 5;       /* vert outer gap between windows and screen edge */
-static       int smartgaps          = 4;        /* 1 means no outer gap when there is only one window */
+static       int smartgaps          = 1;        /* 1 means no outer gap when there is only one window */
 static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
 static const char *fonts[]          = { "FuraCode Nerd Font:size=10" };
@@ -38,7 +38,6 @@ static const char *const autostart[] = {
   "picom", "-b", NULL,
   "sh" ,"-c" ,"~/.config/scripts/dwm_bar.sh", NULL,
   "sh" ,"-c" ,"~/.config/scripts/wallpaper_auto_change.sh", NULL,
-  // "feh", "--bg-fill", "--randomize", "~/.config/wallpaper/*", NULL,
 	NULL /* terminate */
 };
 
