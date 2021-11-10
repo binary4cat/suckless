@@ -37,6 +37,7 @@ static const char *const autostart[] = {
   "copyq", NULL,
   "picom", "-b", NULL,
   "sh" ,"-c" ,"~/.config/scripts/dwm_bar.sh", NULL,
+  "sh" ,"-c" ,"~/.config/scripts/wallpaper_auto_change.sh", NULL,
   // "feh", "--bg-fill", "--randomize", "~/.config/wallpaper/*", NULL,
 	NULL /* terminate */
 };
