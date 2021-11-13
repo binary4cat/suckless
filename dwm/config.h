@@ -54,6 +54,7 @@ static const Rule rules[] = {
 	{ "Firefox",  NULL,       NULL,       1 << 8,       0,           -1 },
   { "flameshot",NULL,       NULL,       0,            1,           -1 },
   { "copyq",    NULL,       NULL,       0,            1,           -1 },
+  { "vlc",      NULL,       NULL,       0,            1,           -1 },
 };
 
 /* layout(s) */
