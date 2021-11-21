@@ -35,6 +35,7 @@ static const char *colors[][3]      = {
 static const char *const autostart[] = {
   "fcitx5", NULL,
   "copyq", NULL,
+  "albert", NULL,
   "picom", "-b", NULL,
   "sh" ,"-c" ,"~/.config/scripts/dwm_bar.sh", NULL,
   "sh" ,"-c" ,"~/.config/scripts/wallpaper_auto_change.sh", NULL,
