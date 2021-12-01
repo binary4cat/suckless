@@ -7,6 +7,11 @@
  */
 static char *font =
     "FuraCode Nerd Font:pixelsize=13:antialias=true:autohint=true";
+/* Spare fonts */
+static char *font2[] = {
+    "Sarasa UI TC:pixelsize=12:antialias=true:autohint=true",
+    "Noto Color Emoji:pixelsize=11:antialias=true:autohint=true",
+};
 static int borderpx = 2;
 
 /*
